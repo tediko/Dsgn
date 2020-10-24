@@ -1,0 +1,12 @@
+/* Variables */
+:root {
+    --clr-primary: #fff;
+    --clr-white: #fff;
+    --clr-black: #000;
+    --clr-orange: #F34739;
+    --clr-gray: #4A4A4A;
+    --clr-blue-light: #009989;
+    --clr-blue-dark: #152B3C;
+    --clr-border-light: #F9FDFC;
+    --clr-border-dark: #00000B;
+}
