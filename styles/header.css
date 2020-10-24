@@ -1,0 +1,31 @@
+/* Header section */
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+}
+.header__wrapper {
+    display: flex;
+    flex: 3;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    color: var(--clr-black);
+    border: 1px solid var(--clr-orange);
+    padding: 13px 28px;
+    border-radius: 16px 0 16px 16px;
+}
+
+.header__socials {
+    
+}
+
+.header__nav {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    background: #101010;
+    height: 100%;
+}
