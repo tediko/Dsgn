@@ -1,5 +1,5 @@
 /* Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300,400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;400&display=swap');
 
 /* Variables */
@@ -13,4 +13,62 @@
     --clr-blue-dark: #152B3C;
     --clr-border-light: #F9FDFC;
     --clr-border-dark: #00000B;
+}
+
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--clr-primary);
+    background: var(--clr-white);
+}
+
+/* Utilities */
+/* Headings */
+h1 {
+    font-size: 4.5rem;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 2.25rem;
+    font-weight: 400;
+}
+
+h3 {
+    font-size: 1.875rem;
+    font-weight: 300;
+}
+
+/* Paragraphs */
+.text {
+    font-size: 1.125rem;
+}
+
+.text-big {
+    font-size: 1.25rem;
+}
+
+.text-small {
+    font-size: 0.75rem;
+}
+
+.text-light {
+    font-weight: 300;
+}
+
+.text-uc {
+    text-transform: uppercase;
 }
