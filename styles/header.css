@@ -139,6 +139,17 @@
     animation: menuSlideReverse 1s forwards;
 }
 
+.header__item {
+    width: 100%;
+}
+
+.header__item .header__link {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    width: 100%;
+}
+
 @keyframes menuSlide {
     0% {
         opacity: 0;
