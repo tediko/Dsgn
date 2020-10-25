@@ -23,6 +23,7 @@
     padding: 13px 28px;
     border-radius: 16px 0 16px 16px;
     margin-right: 28px;
+    text-decoration: none;
 }
 
 .header__socials .header__link {
