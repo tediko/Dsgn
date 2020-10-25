@@ -64,6 +64,7 @@
     align-items: center;
     cursor: pointer;
     margin: 0 0 0 20px;
+    transition: margin 250ms ease-in;
 }
 
 .header__hamburger { /* middle hamburger line */
