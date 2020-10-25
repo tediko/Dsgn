@@ -44,28 +44,24 @@
     align-items: center;
     background: var(--clr-menu);
     transition: background 250ms ease-in;
+    cursor: pointer;
 }
 
+.header__nav:hover {
+    background: var(--clr-gray);
+}
+
+.header__nav.open {
+    background: var(--clr-menu);
+}
 /* Hamburger menu*/
 .header__menu { /* Hamburger button container */
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-   /*  width: 30px;
-    height: 30px; */
     cursor: pointer;
     margin: 0 0 0 20px;
-}
-
-.header__menu:hover .header__hamburger,
-.header__menu:hover .header__hamburger::before,
-.header__menu:hover .header__hamburger::after {
-    background: var(--clr-orange);
-}
-
-.header__menu:hover .header__text {
-    color: var(--clr-orange);
 }
 
 .header__hamburger { /* middle hamburger line */
