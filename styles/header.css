@@ -54,6 +54,7 @@
 .header__nav.open {
     background: var(--clr-menu);
 }
+
 /* Hamburger menu*/
 .header__menu { /* Hamburger button container */
     position: relative;
@@ -218,5 +219,13 @@
 
     .header__menu .header__text {
         display: none;
+    }
+
+    .header__nav:hover {
+        background: transparent;
+    }
+    
+    .header__nav.open {
+        background: transparent;
     }
 }
