@@ -31,6 +31,11 @@ body {
     background: var(--clr-white);
 }
 
+a {
+    color: var(--clr-primary);
+    text-decoration: none;
+}
+
 /* Utilities */
 /* Headings */
 h1, h2, h3, h4 {
@@ -111,4 +116,18 @@ h4 {
     transform: translateY(-50%);
     background: var(--clr-white);
     opacity: 0.6;
+}
+
+/* Call to action */
+.cta {
+    padding: 14px 53px;
+    border: 2px solid var(--clr-white);
+    border-radius: 25px;
+    text-transform: uppercase;
+    transition: background 250ms ease-in;
+    font-size: 1.125rem;
+}
+
+.cta:hover {
+    background: rgba(255, 255, 255, 0.2);
 }
