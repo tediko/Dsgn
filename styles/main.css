@@ -40,6 +40,7 @@ a {
 /* Headings */
 h1, h2, h3, h4 {
     text-transform: uppercase;
+    transition: font-size 250ms ease-in;
 }
 
 h1 {
@@ -62,9 +63,23 @@ h4 {
     font-weight: 300;
 }
 
+/* Headings media queries */
+@media (max-width: 780px) {
+    h1 {
+        font-size: 3.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 3rem;
+    }
+}
+
 /* Paragraphs */
 .text {
     font-size: 1.125rem;
+    transition: font-size 250ms ease-in;
 }
 
 .text-large {
@@ -85,6 +100,13 @@ h4 {
 
 .text-uc {
     text-transform: uppercase;
+}
+
+/* Paragraphs media queries */
+@media (max-width: 480px) {
+    .text-large {
+        font-size: 1.5rem;
+    }
 }
 
 /* Subheadings */
