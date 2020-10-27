@@ -44,6 +44,7 @@
     stroke-dasharray: 630;
     stroke-dashoffset: 630;
     transform-origin: center center;
+    transition: transform 250ms ease-in;
 }
 
 .info__graph svg circle:nth-child(1) {
@@ -83,26 +84,50 @@
     color: #111;
 }
 
-.info__graph--1 .info__value {
-    color: var(--clr-orange);
+.info__value {
     font-size: 4.5rem;
     font-weight: 700;
+    transition: font-size 250ms ease-in;
+}
+
+.info__graph--1 .info__value {
+    color: var(--clr-orange);
 }
 
 .info__graph--2 .info__value {
     color: var(--clr-blue-light);
-    font-size: 4.5rem;
-    font-weight: 700;
 }
 
 .info__graph--3 .info__value {
     color: var(--clr-blue-dark);
-    font-size: 4.5rem;
-    font-weight: 700;
 }
 
 .info__text {
     max-width: 220px;
     text-align: center;
     margin-top: 30px;
+}
+
+/* Info media queries */
+@media (max-width: 768px) {
+    .info__wrapper {
+        flex-flow: wrap;
+        justify-content: space-evenly;
+    }
+
+    .info__value {
+        font-size: 3.5rem;
+    }
+
+    .info__graph svg circle:nth-child(1) {
+        transform: scale(0.8, 0.8);
+    }
+    
+    .info__graph svg circle:nth-child(2) {
+        transform: scale(0.8, 0.8);
+    }
+
+    .info__text {
+        margin: 0;
+    }
 }
