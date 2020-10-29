@@ -1,1 +1,25 @@
 /* Brands section */
+.brands__header {
+    background: url('../assets/img/brands-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px 25px;
+}
+
+.brands__header-Container {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    overflow: hidden;
+    max-width: 1020px;
+    margin: 0 auto;
+    padding: 66px 0;
+    border: 2px solid var(--clr-white);
+}
+
+.brands__header-Wrapper {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    overflow: hidden;
+}
