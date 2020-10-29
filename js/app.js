@@ -46,3 +46,25 @@ boxes.forEach(box => {
         }
     }, delay);
 })
+
+/* HEADER FIXED ON SCROLL */
+const header = document.querySelector('.header');
+const body = document.querySelector('body');
+const sectionOne = document.querySelector('.kv');
+const options = {
+    threshold: 0.15
+}
+
+const headerObserver = new IntersectionObserver(entries => {
+   entries.forEach(entry => {
+       if (!entry.isIntersecting) {
+           header.classList.add('active');
+           body.style.paddingTop = '80px';
+        } else {
+            header.classList.remove('active');
+            body.style.paddingTop = '0';
+       }
+   }) 
+}, options)
+
+headerObserver.observe(sectionOne);
