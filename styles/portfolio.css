@@ -6,7 +6,7 @@
     padding: 50px 25px;
 }
 
-.portfolio__headings {
+.portfolio__header-Container {
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -15,6 +15,13 @@
     margin: 0 auto;
     padding: 66px 0;
     border: 2px solid var(--clr-white);
+}
+
+.portfolio__header-Wrapper {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    overflow: hidden;
 }
 
 .portfolio__grid {
