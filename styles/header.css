@@ -9,6 +9,20 @@
     background: var(--clr-white);
     z-index: 5;
     top: 0;
+    animation: headerIntersecting 250ms forwards;
+    transition: transform 250ms ease-in,
+                opacity 250ms ease-in;
+}
+
+@keyframes headerIntersecting {
+    0% {
+        opacity: 0;
+        transform: translateY(-80px)
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .header__container {
