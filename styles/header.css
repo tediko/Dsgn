@@ -127,6 +127,7 @@
     top: 80px;
     right: 0;
     transform: translateY(-1000px);
+    z-index: 2;
 }
 
 .header__nav.open .header__list {
