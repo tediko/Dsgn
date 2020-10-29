@@ -3,6 +3,14 @@
     display: flex;
 }
 
+.header.active {
+    position: fixed;
+    width: 100%;
+    background: var(--clr-white);
+    z-index: 5;
+    top: 0;
+}
+
 .header__container {
     position: relative;
     max-width: 1250px;
