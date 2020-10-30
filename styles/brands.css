@@ -27,7 +27,6 @@
 .brands__grid {
     display:flex;
     flex-flow: column;
-    
 }
 
 .brands__row {
@@ -64,12 +63,19 @@
     border-right: 1px solid var(--clr-border);
 }
 
+.brands__item:hover img{
+    opacity: 1;
+    filter: grayscale(0%);
+}
+
 .brands__item img {
     width: 60px;
     height: 60px;
     object-fit: cover;
     filter: grayscale(100%);
     opacity: 0.3;
+    transition: filter 250ms ease-in,
+                opacity 250ms ease-in;
 }
 
 /* Brands media queries */
