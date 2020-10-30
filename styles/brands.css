@@ -71,7 +71,7 @@
 .brands__item img {
     width: 60px;
     height: 60px;
-    object-fit: cover;
+    object-fit: fill;
     filter: grayscale(100%);
     opacity: 0.3;
     transition: filter 250ms ease-in,
