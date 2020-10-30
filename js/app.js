@@ -17,35 +17,51 @@ const openMenu = () => {
 nav.addEventListener('click', openMenu);
 
 /* CIRCLE PROGRESS BAR */
+const sectionTwo = document.querySelector('.kv');
 const boxes = document.querySelectorAll('.info__box');
-boxes.forEach(box => {
-    const circle = box.querySelector('[data-circle]');
-    const count = box.querySelector('[data-count]');
-    const progress = parseFloat(count.dataset.count);
-    const initialProgressValue = parseFloat(window.getComputedStyle(circle).strokeDashoffset);
-    let progressInterval;
+const optionsTwo = {
+    threshold: 0.5
+};
 
-    const maxSteps = 100;
-    let step = 0;
-    let stepValue = progress * (1 / 100);
-    let finalProgress = 0;
-    const delay = 3000 / maxSteps;
-    
-    progressInterval = setInterval(() => {
-        if(step < progress) {
-            step += stepValue;
-            count.innerHTML = parseInt(step);
-            if (progress > 100) {
-                finalProgress = 630 - (step * 630) / progress;
-            } else {
-                finalProgress = initialProgressValue - (initialProgressValue * step) / 100;
-            }
-            circle.style.strokeDashoffset = finalProgress;
+const progressObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+            boxes.forEach(box => {
+                const circle = box.querySelector('[data-circle]');
+                const count = box.querySelector('[data-count]');
+                const progress = parseFloat(count.dataset.count);
+                const initialProgressValue = parseFloat(window.getComputedStyle(circle).strokeDashoffset);
+                let progressInterval;
+            
+                const maxSteps = 100;
+                let step = 0;
+                let stepValue = progress * (1 / 100);
+                let finalProgress = 0;
+                const delay = 3000 / maxSteps;
+                
+                progressInterval = setInterval(() => {
+                    if(step < progress) {
+                        step += stepValue;
+                        count.innerHTML = parseInt(step);
+                        if (progress > 100) {
+                            finalProgress = 630 - (step * 630) / progress;
+                        } else {
+                            finalProgress = initialProgressValue - (initialProgressValue * step) / 100;
+                        }
+                        circle.style.strokeDashoffset = finalProgress;
+                    } else {
+                        clearInterval(progressInterval);
+                    }
+                }, delay);
+            })
+            progressObserver.unobserve(sectionTwo);
         } else {
-            clearInterval(progressInterval);
+            console.log('maoo');
         }
-    }, delay);
-})
+    })
+}, optionsTwo)
+
+progressObserver.observe(sectionTwo);
 
 /* HEADER FIXED ON SCROLL */
 const header = document.querySelector('.header');
