@@ -88,3 +88,21 @@ const headerObserver = new IntersectionObserver(entries => {
 }, options)
 
 headerObserver.observe(sectionOne);
+
+/* TEAM SECTION ANIMATION ON SCROLL */
+const teamSection = document.querySelectorAll('.team__box');
+const teamOptions = {
+    threshold: 0.5
+};
+
+const teamObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+        }
+    })
+}, teamOptions)
+
+teamSection.forEach(element => {
+    teamObserver.observe(element);
+})
