@@ -42,16 +42,12 @@
     justify-content: space-between;
 }
 
-.brands__dummy-row {
+.brands__dummy-row { /* Class for empty first and last row */
     height: 60px;
     transition: height 250ms ease-in;
 }
 
-.brands__dummy-row:last-child {
-    border-bottom: none;
-}
-
-.brands__dummy-row .brands__item {
+.brands__dummy-row .brands__item { /* Empty item height to equals row height */
     height: 60px;
 }
 
@@ -81,6 +77,7 @@
     .brands__row-container {
         flex-wrap: wrap;
     }
+
     .brands__item {
         min-width: 33.33%;
         border-bottom: 1px solid var(--clr-border);
@@ -91,7 +88,6 @@
         display: none;
     }
     
-
     .brands__row:not(:first-child) {
         border-bottom: none;
     }
@@ -100,14 +96,14 @@
         border-bottom: none;
     }
 
-    .brands__dummy-row .brands__item:nth-child(4),
+    .brands__dummy-row .brands__item:nth-child(4), /* Disable dummy items so they dont wrap */
     .brands__dummy-row .brands__item:nth-child(5),
     .brands__dummy-row .brands__item:nth-child(6),
     .brands__dummy-row .brands__item:nth-child(7) {
         display: none;
     }
 
-    .brands__item:last-child {
+    .brands__item:last-child { /* Disable 4th item */
         display: none;
     }
 }
