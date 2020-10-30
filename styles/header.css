@@ -226,6 +226,54 @@
     letter-spacing: 1px;
 }
 
+.header__nav.open .header__link {
+    animation: menuSlideItems 1s forwards;
+}
+
+.header__nav.close .header__link {
+    animation: menuSlideItemsReverse 1s forwards;
+}
+
+@keyframes menuSlideItems {
+    0% {
+        opacity: 0;
+        letter-spacing: -10px;
+    }
+
+    40% {
+        opacity: 0;
+    }
+
+    50% {
+        letter-spacing: -10px;
+    }
+
+    100% {
+        opacity: 1;
+        letter-spacing: 5px;
+    }
+}
+
+@keyframes menuSlideItemsReverse {
+    0% {
+        opacity: 1;
+        letter-spacing: 5px;
+    }
+
+    40% {
+        opacity: 0;
+    }
+
+    50% {
+        letter-spacing: -10px;
+    }
+
+    100% {
+        opacity: 0;
+        letter-spacing: -10px;
+    }
+}
+
 /* Header media queries */
 @media (max-width: 768px) {
     .header__menu {
